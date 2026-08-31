@@ -1,8 +1,5 @@
 package com.debuggeandoideas.models;
 
-import lombok.ToString;
-
-@ToString
 public class TimeStone extends Stone{
 
     private static final String COLOR = "Green";
@@ -16,6 +13,10 @@ public class TimeStone extends Stone{
 
     @Override
     public void usePower() {
+        /*
+         * === Business logic ===
+         * When concatenating a string with an object, Java ultimately calls the toString() method directly.
+         * */
         System.out.println("Control time: " + this + ".");
     }
 }

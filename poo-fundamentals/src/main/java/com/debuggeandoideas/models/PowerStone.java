@@ -1,8 +1,5 @@
 package com.debuggeandoideas.models;
 
-import lombok.ToString;
-
-@ToString
 public class PowerStone extends Stone{
 
     private static final String COLOR = "Purple";
@@ -16,7 +13,10 @@ public class PowerStone extends Stone{
 
     @Override
     public void usePower() {
-        // Business logic.
+        /*
+         * === Business logic ===
+         * When concatenating a string with an object, Java ultimately calls the toString() method directly.
+         * */
         System.out.println("Increase power and energy: " + this + ".");
     }
 }

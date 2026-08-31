@@ -1,8 +1,5 @@
 package com.debuggeandoideas.models;
 
-import lombok.ToString;
-
-@ToString
 public class SpaceStone extends Stone{
 
     private static final String COLOR = "Blue";
@@ -16,6 +13,10 @@ public class SpaceStone extends Stone{
 
     @Override
     public void usePower() {
+        /*
+         * === Business logic ===
+         * When concatenating a string with an object, Java ultimately calls the toString() method directly.
+         * */
         System.out.println("Manipulate all space: " + this + ".");
     }
 }

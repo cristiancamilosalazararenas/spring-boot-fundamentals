@@ -1,8 +1,5 @@
 package com.debuggeandoideas.models;
 
-import lombok.ToString;
-
-@ToString
 public class MindStone extends Stone{
 
     private static final String COLOR = "Yellow";
@@ -16,7 +13,10 @@ public class MindStone extends Stone{
 
     @Override
     public void usePower() {
-        // Business logic.
+        /*
+         * === Business logic ===
+         * When concatenating a string with an object, Java ultimately calls the toString() method directly.
+         * */
         System.out.println("Mind control in stone: " + this + ".");
     }
 }
