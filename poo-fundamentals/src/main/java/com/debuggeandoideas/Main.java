@@ -1,11 +1,14 @@
 package com.debuggeandoideas;
 
 import com.debuggeandoideas.models.*;
+import com.debuggeandoideas.services.GauntletServiceImpl;
 
 import java.sql.Time;
 
 public class Main {
     public static void main(String[] args) {
+
+        // === Inheritance and Polymorphism Section ===
 
         // Different ways to instantiate classes.
 
@@ -16,6 +19,7 @@ public class Main {
         * final RealityStone realityStone = new RealityStone(); -> Bad practice.
         * */
 
+        System.out.println("=== Inheritance and Polymorphism Section ===");
         final var mindStone = new MindStone();
         final var powerStone = new PowerStone();
         final var realityStone = new RealityStone();
@@ -34,5 +38,12 @@ public class Main {
         spaceStone.usePower();
         System.out.println("-----------");
         timeStone.usePower();
+        System.out.println("-----------\n");
+
+        // === Encapsulation section ===
+        System.out.println("=== Encapsulation section ===");
+        final var gauntletService = new GauntletServiceImpl();
+        // gauntletService.realityStone = null; -> Modification should not be possible.
+        gauntletService.useGauntlet("");
     }
 }

@@ -9,11 +9,11 @@ import lombok.*;
 @ToString
 public abstract class Stone {
 
-    String color;
-    String name;
-    String location;
-    Integer energyLevel;
-    Integer numberOfSides;
+    protected String color;
+    protected String name;
+    protected String location;
+    protected Integer energyLevel;
+    protected Integer numberOfSides;
 
     private static final int NUMBER_OF_SIDES = 6;
 
